@@ -1,0 +1,54 @@
+#summary forbidden URLs.  please edit this as RAW format.
+
+# Sample forbidden URLs file for polipo.  -*-sh-*-
+# Put this in /etc/polipo/forbidden or in ~/.polipo-forbidden.
+
+# for TEST URL. don't modify here
+^http://homepage\.mac\.com/koh/test/dolipo\.html
+^http://dolipo\.googlecode\.com/svn/trunk/sites/dolipo\.html
+
+# Forbid all hosts belonging to a given domain name:
+counter.com
+hitbox.com
+doubleclick.net
+www.cashcount.com
+rad.msn.com
+googlesyndication.com
+ad.nikkansports.com
+becon.nikkansports.com
+advertising.com
+en-japan.com
+red.hatena.ne.jp/ad
+az.trackword.net
+ad.adplan-ds.com
+ad.afy11.net
+ad.agilemedia.jp
+ad.ascii.jp
+ad.axyzconductor.jp
+ad.brainer.jp
+ad.doubleclick.net
+ad.floq.jp
+ad.hatena.ne.jp
+ad.linksynergy.com
+ad.newsing.jp
+ad.nicovideo.jp
+ad.nikkansports.com
+ad.nttnavi.co.jp
+ad.pitta.ne.jp
+ad.rbbtoday.com
+ad.spacehunter.drecom.jp
+ads.mixi.jp
+cache.microad.jp
+web-jp.ad-v.jp
+ad.z5x.net
+clicktorrent.info
+
+# Forbid all hosts contaning a string matching a given regex.  Note
+# that you need to quote dots, so that a regex is not misinterpreted
+# as a domain name.
+
+^http://japan\.cnet\.com/ads/
+#^http://[^/]*counter\.com
+#/ads/
+#/phpAdsNew
+#counting\.php

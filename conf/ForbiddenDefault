@@ -1,0 +1,8 @@
+ummary default forbidden URLs.  please edit this as RAW format.
+
+# Sample forbidden URLs file for polipo.  -*-sh-*-
+# Put this in /etc/polipo/forbidden or in ~/.polipo-forbidden.
+
+# for TEST URL. don't modify here
+^http://homepage\.mac\.com/koh/test/dolipo\.html
+^http://dolipo\.googlecode\.com/svn/trunk/sites/dolipo\.html
