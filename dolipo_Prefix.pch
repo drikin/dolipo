@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'dolipo' target in the 'dolipo' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

@@ -1,0 +1,400 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 44;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		D75599740D6C9AF8007A5079 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D75599730D6C9AF8007A5079 /* Sparkle.framework */; };
+		D755998B0D6C9B3F007A5079 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D75599730D6C9AF8007A5079 /* Sparkle.framework */; };
+		D75599C20D6C9D56007A5079 /* StatusIcon.tiff in Resources */ = {isa = PBXBuildFile; fileRef = D75599C10D6C9D56007A5079 /* StatusIcon.tiff */; };
+		D75599DE0D6CA144007A5079 /* FadeWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = D75599DD0D6CA144007A5079 /* FadeWindow.m */; };
+		D76C87E30D7CBD8D002605AC /* polipo_trimcache-0.2.py in Resources */ = {isa = PBXBuildFile; fileRef = D76C87E20D7CBD8D002605AC /* polipo_trimcache-0.2.py */; };
+		D782DC670D74645300F36350 /* dolipo.tiff in Resources */ = {isa = PBXBuildFile; fileRef = D782DC660D74645300F36350 /* dolipo.tiff */; };
+		D782DD8A0D791FF200F36350 /* proxy.pac in Resources */ = {isa = PBXBuildFile; fileRef = D782DD890D791FF200F36350 /* proxy.pac */; };
+		D785D7490D7B131800677F1F /* COPYING.text in Resources */ = {isa = PBXBuildFile; fileRef = D785D7480D7B131800677F1F /* COPYING.text */; };
+		D7987FA00D83DCDB00E9D333 /* Config.wiki in Resources */ = {isa = PBXBuildFile; fileRef = D7987F9D0D83DCDB00E9D333 /* Config.wiki */; };
+		D7987FA10D83DCDB00E9D333 /* Forbidden.wiki in Resources */ = {isa = PBXBuildFile; fileRef = D7987F9E0D83DCDB00E9D333 /* Forbidden.wiki */; };
+		D7987FA20D83DCDB00E9D333 /* Uncachable.wiki in Resources */ = {isa = PBXBuildFile; fileRef = D7987F9F0D83DCDB00E9D333 /* Uncachable.wiki */; };
+		D7987FBE0D8460CF00E9D333 /* NSFileManagerDK.m in Sources */ = {isa = PBXBuildFile; fileRef = D7987FBD0D8460CF00E9D333 /* NSFileManagerDK.m */; };
+		D79880B40D84C81100E9D333 /* ForbiddenDefault.wiki in Resources */ = {isa = PBXBuildFile; fileRef = D79880B30D84C81100E9D333 /* ForbiddenDefault.wiki */; };
+		D7BAF5610D69EE3500ECB817 /* polipo in Resources */ = {isa = PBXBuildFile; fileRef = D7BAF5600D69EE3500ECB817 /* polipo */; };
+		D7BAF5830D69EF9800ECB817 /* DolipoController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BAF5800D69EF9800ECB817 /* DolipoController.m */; };
+		D7BAF5840D69EF9800ECB817 /* TaskWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BAF5820D69EF9800ECB817 /* TaskWrapper.m */; };
+		D7BAF6890D6A4E6A00ECB817 /* dolipo.icns in Resources */ = {isa = PBXBuildFile; fileRef = D7BAF6880D6A4E6A00ECB817 /* dolipo.icns */; };
+		D7BAF71C0D6B215600ECB817 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BAF71B0D6B215600ECB817 /* SystemConfiguration.framework */; };
+		D7C7F5A00D6CB0BB006133A0 /* NTLoginItemMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C7F59F0D6CB0BB006133A0 /* NTLoginItemMgr.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D755999E0D6C9B45007A5079 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D755998B0D6C9B3F007A5079 /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* dolipo_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dolipo_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* dolipo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dolipo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D75599730D6C9AF8007A5079 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		D75599C10D6C9D56007A5079 /* StatusIcon.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = StatusIcon.tiff; sourceTree = "<group>"; };
+		D75599DC0D6CA144007A5079 /* FadeWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FadeWindow.h; sourceTree = "<group>"; };
+		D75599DD0D6CA144007A5079 /* FadeWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FadeWindow.m; sourceTree = "<group>"; };
+		D76C87E20D7CBD8D002605AC /* polipo_trimcache-0.2.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = "polipo_trimcache-0.2.py"; sourceTree = "<group>"; };
+		D782DC660D74645300F36350 /* dolipo.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = dolipo.tiff; sourceTree = "<group>"; };
+		D782DD890D791FF200F36350 /* proxy.pac */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = proxy.pac; sourceTree = "<group>"; };
+		D785D7480D7B131800677F1F /* COPYING.text */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING.text; sourceTree = "<group>"; };
+		D7987F9D0D83DCDB00E9D333 /* Config.wiki */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; lineEnding = 0; name = Config.wiki; path = ../../wiki/Config.wiki; sourceTree = SOURCE_ROOT; };
+		D7987F9E0D83DCDB00E9D333 /* Forbidden.wiki */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Forbidden.wiki; path = ../../wiki/Forbidden.wiki; sourceTree = SOURCE_ROOT; };
+		D7987F9F0D83DCDB00E9D333 /* Uncachable.wiki */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Uncachable.wiki; path = ../../wiki/Uncachable.wiki; sourceTree = SOURCE_ROOT; };
+		D7987FBC0D8460CF00E9D333 /* NSFileManagerDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSFileManagerDK.h; sourceTree = "<group>"; };
+		D7987FBD0D8460CF00E9D333 /* NSFileManagerDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSFileManagerDK.m; sourceTree = "<group>"; };
+		D79880B30D84C81100E9D333 /* ForbiddenDefault.wiki */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; lineEnding = 0; name = ForbiddenDefault.wiki; path = ../../wiki/ForbiddenDefault.wiki; sourceTree = SOURCE_ROOT; };
+		D79881810D85A49900E9D333 /* dolipo_release.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = dolipo_release.xml; path = ../sites/dolipo_release.xml; sourceTree = SOURCE_ROOT; };
+		D79881820D85A49900E9D333 /* dolipo_release.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = dolipo_release.html; path = ../sites/dolipo_release.html; sourceTree = SOURCE_ROOT; };
+		D7BAF5600D69EE3500ECB817 /* polipo */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = polipo; sourceTree = "<group>"; };
+		D7BAF57F0D69EF9800ECB817 /* DolipoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DolipoController.h; sourceTree = "<group>"; };
+		D7BAF5800D69EF9800ECB817 /* DolipoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DolipoController.m; sourceTree = "<group>"; };
+		D7BAF5810D69EF9800ECB817 /* TaskWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskWrapper.h; sourceTree = "<group>"; };
+		D7BAF5820D69EF9800ECB817 /* TaskWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskWrapper.m; sourceTree = "<group>"; };
+		D7BAF6880D6A4E6A00ECB817 /* dolipo.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = dolipo.icns; sourceTree = "<group>"; };
+		D7BAF71B0D6B215600ECB817 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = /System/Library/Frameworks/SystemConfiguration.framework; sourceTree = "<absolute>"; };
+		D7C7F59E0D6CB0BB006133A0 /* NTLoginItemMgr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTLoginItemMgr.h; sourceTree = "<group>"; };
+		D7C7F59F0D6CB0BB006133A0 /* NTLoginItemMgr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTLoginItemMgr.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				D7BAF71C0D6B215600ECB817 /* SystemConfiguration.framework in Frameworks */,
+				D75599740D6C9AF8007A5079 /* Sparkle.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D7987FBC0D8460CF00E9D333 /* NSFileManagerDK.h */,
+				D7987FBD0D8460CF00E9D333 /* NSFileManagerDK.m */,
+				D7C7F59E0D6CB0BB006133A0 /* NTLoginItemMgr.h */,
+				D7C7F59F0D6CB0BB006133A0 /* NTLoginItemMgr.m */,
+				D7BAF57F0D69EF9800ECB817 /* DolipoController.h */,
+				D7BAF5800D69EF9800ECB817 /* DolipoController.m */,
+				D7BAF5810D69EF9800ECB817 /* TaskWrapper.h */,
+				D7BAF5820D69EF9800ECB817 /* TaskWrapper.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D7BAF71B0D6B215600ECB817 /* SystemConfiguration.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D75599730D6C9AF8007A5079 /* Sparkle.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* dolipo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* Polipoli */ = {
+			isa = PBXGroup;
+			children = (
+				D79881800D85A47F00E9D333 /* HTML */,
+				D75599DB0D6CA131007A5079 /* UI Classes */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = Polipoli;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* dolipo_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D7987F9D0D83DCDB00E9D333 /* Config.wiki */,
+				D7987F9E0D83DCDB00E9D333 /* Forbidden.wiki */,
+				D79880B30D84C81100E9D333 /* ForbiddenDefault.wiki */,
+				D7987F9F0D83DCDB00E9D333 /* Uncachable.wiki */,
+				D76C87E20D7CBD8D002605AC /* polipo_trimcache-0.2.py */,
+				D785D7480D7B131800677F1F /* COPYING.text */,
+				D782DD890D791FF200F36350 /* proxy.pac */,
+				D782DC660D74645300F36350 /* dolipo.tiff */,
+				D75599C10D6C9D56007A5079 /* StatusIcon.tiff */,
+				D7BAF6880D6A4E6A00ECB817 /* dolipo.icns */,
+				D7BAF5600D69EE3500ECB817 /* polipo */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D75599DB0D6CA131007A5079 /* UI Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D75599DC0D6CA144007A5079 /* FadeWindow.h */,
+				D75599DD0D6CA144007A5079 /* FadeWindow.m */,
+			);
+			name = "UI Classes";
+			sourceTree = "<group>";
+		};
+		D79881800D85A47F00E9D333 /* HTML */ = {
+			isa = PBXGroup;
+			children = (
+				D79881810D85A49900E9D333 /* dolipo_release.xml */,
+				D79881820D85A49900E9D333 /* dolipo_release.html */,
+			);
+			name = HTML;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* dolipo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "dolipo" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				D755999E0D6C9B45007A5079 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = dolipo;
+			productInstallPath = "$(HOME)/Applications";
+			productName = Polipoli;
+			productReference = 8D1107320486CEB800E47090 /* dolipo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "dolipo" */;
+			compatibilityVersion = "Xcode 3.0";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* Polipoli */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* dolipo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				D7BAF5610D69EE3500ECB817 /* polipo in Resources */,
+				D7BAF6890D6A4E6A00ECB817 /* dolipo.icns in Resources */,
+				D75599C20D6C9D56007A5079 /* StatusIcon.tiff in Resources */,
+				D782DC670D74645300F36350 /* dolipo.tiff in Resources */,
+				D782DD8A0D791FF200F36350 /* proxy.pac in Resources */,
+				D785D7490D7B131800677F1F /* COPYING.text in Resources */,
+				D76C87E30D7CBD8D002605AC /* polipo_trimcache-0.2.py in Resources */,
+				D7987FA00D83DCDB00E9D333 /* Config.wiki in Resources */,
+				D7987FA10D83DCDB00E9D333 /* Forbidden.wiki in Resources */,
+				D7987FA20D83DCDB00E9D333 /* Uncachable.wiki in Resources */,
+				D79880B40D84C81100E9D333 /* ForbiddenDefault.wiki in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				D7BAF5830D69EF9800ECB817 /* DolipoController.m in Sources */,
+				D7BAF5840D69EF9800ECB817 /* TaskWrapper.m in Sources */,
+				D75599DE0D6CA144007A5079 /* FadeWindow.m in Sources */,
+				D7C7F5A00D6CB0BB006133A0 /* NTLoginItemMgr.m in Sources */,
+				D7987FBE0D8460CF00E9D333 /* NSFileManagerDK.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29B97319FDCFA39411CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = dolipo_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = dolipo;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = dolipo_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = dolipo;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "dolipo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "dolipo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
