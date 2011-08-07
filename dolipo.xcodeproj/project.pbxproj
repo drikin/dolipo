@@ -11,8 +11,6 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		D75599740D6C9AF8007A5079 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D75599730D6C9AF8007A5079 /* Sparkle.framework */; };
-		D755998B0D6C9B3F007A5079 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D75599730D6C9AF8007A5079 /* Sparkle.framework */; };
 		D75599C20D6C9D56007A5079 /* StatusIcon.tiff in Resources */ = {isa = PBXBuildFile; fileRef = D75599C10D6C9D56007A5079 /* StatusIcon.tiff */; };
 		D75599DE0D6CA144007A5079 /* FadeWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = D75599DD0D6CA144007A5079 /* FadeWindow.m */; };
 		D76C87E30D7CBD8D002605AC /* polipo_trimcache-0.2.py in Resources */ = {isa = PBXBuildFile; fileRef = D76C87E20D7CBD8D002605AC /* polipo_trimcache-0.2.py */; };
@@ -39,7 +37,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D755998B0D6C9B3F007A5079 /* Sparkle.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +53,6 @@
 		32CA4F630368D1EE00C91783 /* dolipo_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dolipo_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* dolipo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dolipo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D75599730D6C9AF8007A5079 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		D75599C10D6C9D56007A5079 /* StatusIcon.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = StatusIcon.tiff; sourceTree = "<group>"; };
 		D75599DC0D6CA144007A5079 /* FadeWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FadeWindow.h; sourceTree = "<group>"; };
 		D75599DD0D6CA144007A5079 /* FadeWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FadeWindow.m; sourceTree = "<group>"; };
@@ -90,7 +86,6 @@
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				D7BAF71C0D6B215600ECB817 /* SystemConfiguration.framework in Frameworks */,
-				D75599740D6C9AF8007A5079 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,7 +119,6 @@
 		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D75599730D6C9AF8007A5079 /* Sparkle.framework */,
 				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
 				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
 				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
@@ -240,7 +234,11 @@
 			isa = PBXProject;
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "dolipo" */;
 			compatibilityVersion = "Xcode 3.0";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* Polipoli */;
 			projectDirPath = "";
 			projectRoot = "";
