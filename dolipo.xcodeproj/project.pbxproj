@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 44;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,11 +17,11 @@
 		D782DC670D74645300F36350 /* dolipo.tiff in Resources */ = {isa = PBXBuildFile; fileRef = D782DC660D74645300F36350 /* dolipo.tiff */; };
 		D782DD8A0D791FF200F36350 /* proxy.pac in Resources */ = {isa = PBXBuildFile; fileRef = D782DD890D791FF200F36350 /* proxy.pac */; };
 		D785D7490D7B131800677F1F /* COPYING.text in Resources */ = {isa = PBXBuildFile; fileRef = D785D7480D7B131800677F1F /* COPYING.text */; };
-		D7987FA00D83DCDB00E9D333 /* Config.wiki in Resources */ = {isa = PBXBuildFile; fileRef = D7987F9D0D83DCDB00E9D333 /* Config.wiki */; };
-		D7987FA10D83DCDB00E9D333 /* Forbidden.wiki in Resources */ = {isa = PBXBuildFile; fileRef = D7987F9E0D83DCDB00E9D333 /* Forbidden.wiki */; };
-		D7987FA20D83DCDB00E9D333 /* Uncachable.wiki in Resources */ = {isa = PBXBuildFile; fileRef = D7987F9F0D83DCDB00E9D333 /* Uncachable.wiki */; };
+		D796017613EF3F040069CF51 /* Config in Resources */ = {isa = PBXBuildFile; fileRef = D796017213EF3F040069CF51 /* Config */; };
+		D796017713EF3F040069CF51 /* Forbidden in Resources */ = {isa = PBXBuildFile; fileRef = D796017313EF3F040069CF51 /* Forbidden */; };
+		D796017813EF3F040069CF51 /* ForbiddenDefault in Resources */ = {isa = PBXBuildFile; fileRef = D796017413EF3F040069CF51 /* ForbiddenDefault */; };
+		D796017913EF3F040069CF51 /* Uncachable in Resources */ = {isa = PBXBuildFile; fileRef = D796017513EF3F040069CF51 /* Uncachable */; };
 		D7987FBE0D8460CF00E9D333 /* NSFileManagerDK.m in Sources */ = {isa = PBXBuildFile; fileRef = D7987FBD0D8460CF00E9D333 /* NSFileManagerDK.m */; };
-		D79880B40D84C81100E9D333 /* ForbiddenDefault.wiki in Resources */ = {isa = PBXBuildFile; fileRef = D79880B30D84C81100E9D333 /* ForbiddenDefault.wiki */; };
 		D7BAF5610D69EE3500ECB817 /* polipo in Resources */ = {isa = PBXBuildFile; fileRef = D7BAF5600D69EE3500ECB817 /* polipo */; };
 		D7BAF5830D69EF9800ECB817 /* DolipoController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BAF5800D69EF9800ECB817 /* DolipoController.m */; };
 		D7BAF5840D69EF9800ECB817 /* TaskWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BAF5820D69EF9800ECB817 /* TaskWrapper.m */; };
@@ -60,12 +60,13 @@
 		D782DC660D74645300F36350 /* dolipo.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = dolipo.tiff; sourceTree = "<group>"; };
 		D782DD890D791FF200F36350 /* proxy.pac */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = proxy.pac; sourceTree = "<group>"; };
 		D785D7480D7B131800677F1F /* COPYING.text */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING.text; sourceTree = "<group>"; };
-		D7987F9D0D83DCDB00E9D333 /* Config.wiki */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; lineEnding = 0; name = Config.wiki; path = ../../wiki/Config.wiki; sourceTree = SOURCE_ROOT; };
-		D7987F9E0D83DCDB00E9D333 /* Forbidden.wiki */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Forbidden.wiki; path = ../../wiki/Forbidden.wiki; sourceTree = SOURCE_ROOT; };
-		D7987F9F0D83DCDB00E9D333 /* Uncachable.wiki */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Uncachable.wiki; path = ../../wiki/Uncachable.wiki; sourceTree = SOURCE_ROOT; };
+		D796017213EF3F040069CF51 /* Config */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Config; path = conf/Config; sourceTree = "<group>"; };
+		D796017313EF3F040069CF51 /* Forbidden */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Forbidden; path = conf/Forbidden; sourceTree = "<group>"; };
+		D796017413EF3F040069CF51 /* ForbiddenDefault */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ForbiddenDefault; path = conf/ForbiddenDefault; sourceTree = "<group>"; };
+		D796017513EF3F040069CF51 /* Uncachable */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Uncachable; path = conf/Uncachable; sourceTree = "<group>"; };
+		D796017A13EF3FA90069CF51 /* dolipo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = dolipo.entitlements; sourceTree = "<group>"; };
 		D7987FBC0D8460CF00E9D333 /* NSFileManagerDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSFileManagerDK.h; sourceTree = "<group>"; };
 		D7987FBD0D8460CF00E9D333 /* NSFileManagerDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSFileManagerDK.m; sourceTree = "<group>"; };
-		D79880B30D84C81100E9D333 /* ForbiddenDefault.wiki */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; lineEnding = 0; name = ForbiddenDefault.wiki; path = ../../wiki/ForbiddenDefault.wiki; sourceTree = SOURCE_ROOT; };
 		D79881810D85A49900E9D333 /* dolipo_release.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = dolipo_release.xml; path = ../sites/dolipo_release.xml; sourceTree = SOURCE_ROOT; };
 		D79881820D85A49900E9D333 /* dolipo_release.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = dolipo_release.html; path = ../sites/dolipo_release.html; sourceTree = SOURCE_ROOT; };
 		D7BAF5600D69EE3500ECB817 /* polipo */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = polipo; sourceTree = "<group>"; };
@@ -137,6 +138,7 @@
 		29B97314FDCFA39411CA2CEA /* Polipoli */ = {
 			isa = PBXGroup;
 			children = (
+				D796017A13EF3FA90069CF51 /* dolipo.entitlements */,
 				D79881800D85A47F00E9D333 /* HTML */,
 				D75599DB0D6CA131007A5079 /* UI Classes */,
 				080E96DDFE201D6D7F000001 /* Classes */,
@@ -160,10 +162,10 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D7987F9D0D83DCDB00E9D333 /* Config.wiki */,
-				D7987F9E0D83DCDB00E9D333 /* Forbidden.wiki */,
-				D79880B30D84C81100E9D333 /* ForbiddenDefault.wiki */,
-				D7987F9F0D83DCDB00E9D333 /* Uncachable.wiki */,
+				D796017213EF3F040069CF51 /* Config */,
+				D796017313EF3F040069CF51 /* Forbidden */,
+				D796017413EF3F040069CF51 /* ForbiddenDefault */,
+				D796017513EF3F040069CF51 /* Uncachable */,
 				D76C87E20D7CBD8D002605AC /* polipo_trimcache-0.2.py */,
 				D785D7480D7B131800677F1F /* COPYING.text */,
 				D782DD890D791FF200F36350 /* proxy.pac */,
@@ -232,8 +234,11 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0410;
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "dolipo" */;
-			compatibilityVersion = "Xcode 3.0";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -262,10 +267,10 @@
 				D782DD8A0D791FF200F36350 /* proxy.pac in Resources */,
 				D785D7490D7B131800677F1F /* COPYING.text in Resources */,
 				D76C87E30D7CBD8D002605AC /* polipo_trimcache-0.2.py in Resources */,
-				D7987FA00D83DCDB00E9D333 /* Config.wiki in Resources */,
-				D7987FA10D83DCDB00E9D333 /* Forbidden.wiki in Resources */,
-				D7987FA20D83DCDB00E9D333 /* Uncachable.wiki in Resources */,
-				D79880B40D84C81100E9D333 /* ForbiddenDefault.wiki in Resources */,
+				D796017613EF3F040069CF51 /* Config in Resources */,
+				D796017713EF3F040069CF51 /* Forbidden in Resources */,
+				D796017813EF3F040069CF51 /* ForbiddenDefault in Resources */,
+				D796017913EF3F040069CF51 /* Uncachable in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,19 +315,16 @@
 		C01FCF4B08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)\"",
-				);
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = dolipo_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = dolipo;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = YES;
@@ -332,16 +334,14 @@
 		C01FCF4C08A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)\"",
-				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = dolipo_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = dolipo;
 				WRAPPER_EXTENSION = app;
 			};
@@ -352,22 +352,19 @@
 			buildSettings = {
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				PREBINDING = NO;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				PREBINDING = NO;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
