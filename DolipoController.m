@@ -196,6 +196,8 @@
 	
 	TaskWrapper* trimTask=[[TaskWrapper alloc] initWithController:self arguments:[NSArray arrayWithObjects:@"/usr/bin/python", trimPath, @"-v", [[[NSFileManager defaultManager] applicationSupportPath] stringByAppendingPathComponent:@"Cache"], maximumCacheSize, nil]];
 	[trimTask startProcess];
+    
+    [self restart:self];
 }
 
 // This callback is implemented as part of conforming to the ProcessController protocol.
