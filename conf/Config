@@ -157,5 +157,5 @@ diskCacheUnlinkTime = 7d
 chunkHighMark = 50331648
 objectHighMark = 16384
 dontCacheRedirects = true
-uncachableFile = "~/Library/Application Support/dolipo/Uncachable.wiki"
+uncachableFile = "~/Library/Application Support/dolipo/Uncachable"
 forbiddenUrl = "http://homepage.mac.com/koh/test/forbidden.html"
