@@ -65,10 +65,10 @@
 	[[NSFileManager defaultManager] createDirectoryAtSupportPath:@"Cache"];
 	
 	// copy resource files for polipo
-	NSArray* copylist = [NSArray arrayWithObjects:	@"ForbiddenDefault.wiki", 
-													@"Forbidden.wiki",
-													@"Uncachable.wiki",
-													@"Config.wiki",
+	NSArray* copylist = [NSArray arrayWithObjects:	@"ForbiddenDefault", 
+													@"Forbidden",
+													@"Uncachable",
+													@"Config",
 													@"proxy.pac",
 													nil];
 	int i;
@@ -152,9 +152,9 @@
 		}
 		NSString* forbidden;
 		if ( [adblockEnableMenu state] == NSOnState ) {
-			forbidden = [[[NSString alloc] initWithFormat:@"forbiddenFile = \"~/Library/Application Support/dolipo/Forbidden.wiki\""] autorelease];
+			forbidden = [[[NSString alloc] initWithFormat:@"forbiddenFile = \"~/Library/Application Support/dolipo/Forbidden\""] autorelease];
 		} else {
-			forbidden = [[[NSString alloc] initWithFormat:@"forbiddenFile = \"~/Library/Application Support/dolipo/ForbiddenDefault.wiki\""] autorelease];
+			forbidden = [[[NSString alloc] initWithFormat:@"forbiddenFile = \"~/Library/Application Support/dolipo/ForbiddenDefault\""] autorelease];
 		}
 		NSString* pmm;
 		if ( [pmmEnableMenu state] == NSOnState ) {
@@ -162,7 +162,7 @@
 		} else {
 			pmm = @"";
 		}
-        polipoTask=[[TaskWrapper alloc] initWithController:self arguments:[NSArray arrayWithObjects:polipoPath, @"-c", @"Config.wiki", proxy, forbidden, pmm, nil]];
+        polipoTask=[[TaskWrapper alloc] initWithController:self arguments:[NSArray arrayWithObjects:polipoPath, @"-c", @"Config", proxy, forbidden, pmm, nil]];
         // kick off the process asynchronously
         [polipoTask startProcess];
 		
