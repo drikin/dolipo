@@ -64,7 +64,6 @@
 		D796017313EF3F040069CF51 /* Forbidden */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Forbidden; path = conf/Forbidden; sourceTree = "<group>"; };
 		D796017413EF3F040069CF51 /* ForbiddenDefault */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ForbiddenDefault; path = conf/ForbiddenDefault; sourceTree = "<group>"; };
 		D796017513EF3F040069CF51 /* Uncachable */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Uncachable; path = conf/Uncachable; sourceTree = "<group>"; };
-		D796017A13EF3FA90069CF51 /* dolipo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = dolipo.entitlements; sourceTree = "<group>"; };
 		D7987FBC0D8460CF00E9D333 /* NSFileManagerDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSFileManagerDK.h; sourceTree = "<group>"; };
 		D7987FBD0D8460CF00E9D333 /* NSFileManagerDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSFileManagerDK.m; sourceTree = "<group>"; };
 		D79881810D85A49900E9D333 /* dolipo_release.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = dolipo_release.xml; path = ../sites/dolipo_release.xml; sourceTree = SOURCE_ROOT; };
@@ -138,7 +137,6 @@
 		29B97314FDCFA39411CA2CEA /* Polipoli */ = {
 			isa = PBXGroup;
 			children = (
-				D796017A13EF3FA90069CF51 /* dolipo.entitlements */,
 				D79881800D85A47F00E9D333 /* HTML */,
 				D75599DB0D6CA131007A5079 /* UI Classes */,
 				080E96DDFE201D6D7F000001 /* Classes */,
@@ -360,7 +358,7 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
