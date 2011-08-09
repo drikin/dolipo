@@ -57,9 +57,6 @@
     polipoTask=nil;
 
 	[self createStatusBar];
-
-	// trim cache first
-	[self trim:self];
 	
 	// create Cache Directory
 	[[NSFileManager defaultManager] createDirectoryAtSupportPath:@"Cache"];
@@ -75,13 +72,16 @@
 	for ( i = 0; i < [copylist count]; i++ ) {
 		[[NSFileManager defaultManager] copyFileFromResourcePathToSupportPath:[copylist objectAtIndex:i]];
 	}
-	
+
+	// check proxy setting
 	[self confirmProxySetting];
-	[self restart:self];
 	
 	// callbackの登録 
 	[self watchForNetworkChanges];
-	
+
+    // trim cache first then run polipo
+	[self trim:self];
+
 	// schedule trim cache : 60*60*24 sec = 24 hour
 	[NSTimer scheduledTimerWithTimeInterval:60*60*24 target:self selector:@selector(trim:) userInfo:nil repeats:YES];
 }
@@ -98,26 +98,26 @@
 #pragma mark TaskWrapper
 
 - (void)kill
-{
-	TaskWrapper* killall = [[TaskWrapper alloc] initWithController:self arguments:[NSArray arrayWithObjects:@"/usr/bin/killall", @"polipo", nil]];
-	[killall startProcess];
-	[killall release];
-	
-	if (polipoRunning)
-    {
-        // This stops the task and calls our callback (-processFinished)
-        [polipoTask stopProcess];
-        // Release the memory for this wrapper object
-        [polipoTask release];
-        polipoTask=nil;
-    }
+{	
+    NSLog(@"killall");
+    NSArray *args = [NSArray arrayWithObjects:@"polipo", nil];
+    NSTask *aTask = [NSTask launchedTaskWithLaunchPath:@"/usr/bin/killall" arguments:args];
+
+    aTask.terminationHandler = ^(NSTask *task){
+        polipoRunning = NO;
+    };
 }
 
 - (IBAction)restart:(id)sender
 {
 	NSLog(@"polipo restart");
-	[self kill];
-	[self run:self];
+    NSArray *args = [NSArray arrayWithObjects:@"polipo", nil];
+    NSTask *aTask = [NSTask launchedTaskWithLaunchPath:@"/usr/bin/killall" arguments:args];
+    
+    aTask.terminationHandler = ^(NSTask *task){
+        polipoRunning = NO;
+        [self run:self];
+    };
 	return;
 }
 
@@ -127,18 +127,14 @@
 {
     if (polipoRunning)
     {
-        // This stops the task and calls our callback (-processFinished)
-        [polipoTask stopProcess];
-        // Release the memory for this wrapper object
-        [polipoTask release];
-        polipoTask=nil;
         return;
     }
     else
     {
         // If the task is still sitting around from the last run, release it
-        if (polipoTask!=nil)
-        [polipoTask release];
+        if (polipoTask!=nil) {
+            [polipoTask release];
+        }
 		
 		/* create an Path to polipo file */
 		NSBundle* bundle = [NSBundle mainBundle];
@@ -162,6 +158,7 @@
 		} else {
 			pmm = @"";
 		}
+        NSLog(@"polipo start");
         polipoTask=[[TaskWrapper alloc] initWithController:self arguments:[NSArray arrayWithObjects:polipoPath, @"-c", @"Config", proxy, forbidden, pmm, nil]];
         // kick off the process asynchronously
         [polipoTask startProcess];
@@ -186,6 +183,7 @@
 {	
 	NSBundle* bundle = [NSBundle mainBundle];
 	NSString* trimPath = [bundle pathForResource:@"polipo_trimcache-0.2" ofType:@"py"];
+    NSString* cachePath = [[[NSFileManager defaultManager] applicationSupportPath] stringByAppendingPathComponent:@"Cache"];
 	NSString* maximumCacheSize;
 	
 	if ( [maximumCacheSizeField intValue] > 0 ) {
@@ -194,10 +192,12 @@
 		maximumCacheSize = @"500M";
 	}
 	
-	TaskWrapper* trimTask=[[TaskWrapper alloc] initWithController:self arguments:[NSArray arrayWithObjects:@"/usr/bin/python", trimPath, @"-v", [[[NSFileManager defaultManager] applicationSupportPath] stringByAppendingPathComponent:@"Cache"], maximumCacheSize, nil]];
-	[trimTask startProcess];
-    
-    [self restart:self];
+    NSArray *args = [NSArray arrayWithObjects:trimPath, @"-v", cachePath, maximumCacheSize, nil];
+    NSTask *aTask = [NSTask launchedTaskWithLaunchPath:@"/usr/bin/python" arguments:args];
+
+    aTask.terminationHandler = ^(NSTask *task){
+        [self restart:self];
+    };
 }
 
 // This callback is implemented as part of conforming to the ProcessController protocol.
