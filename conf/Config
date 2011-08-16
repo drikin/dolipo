@@ -157,9 +157,25 @@
 
 ### dolipo original
 diskCacheRoot = "~/Library/Application\ Support/dolipo/Cache/"
-diskCacheUnlinkTime = 7d
-chunkHighMark = 50331648
-objectHighMark = 16384
+#diskCacheRoot = ""
+#diskCacheUnlinkTime = 7d
+#chunkHighMark = 50331648
+#objectHighMark = 16384
 dontCacheRedirects = true
-uncachableFile = "~/Library/Application Support/dolipo/Uncachable"
+dontCacheCookies = true
+uncachableFile = "~/Library/Application\ Support/dolipo/Uncachable"
 forbiddenUrl = "http://homepage.mac.com/koh/test/forbidden.html"
+#pipelineAdditionalRequests = false
+#maxPipelineTrain = 4
+serverMaxSlots = 12
+serverSlots = 6
+serverSlots1 = 12
+#replyUnpipelineTime = 10
+#dnsUseGethostbyname = yes
+#disableIndexing = false
+#disableServersList = false
+#logLevel=0x1
+maxAge = 0
+maxExpiresAge = 0
+#proxyAddress = "0.0.0.0"    # IPv4 only
+#allowedClients = 127.0.0.1, 192.168.1.0/24
