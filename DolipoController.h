@@ -15,8 +15,6 @@
 	// StatusItem instance
 	NSStatusItem *sbItem;	
 	
-    IBOutlet id resultsTextField;
-    IBOutlet id window;
 	IBOutlet id prefWindow;
 	IBOutlet id alertPanel;
 	IBOutlet id sbMenu;
@@ -27,8 +25,7 @@
     IBOutlet id portTextField;
 	IBOutlet id maximumCacheSizeField;
 	IBOutlet id startAtLoginMenuItem;
-	TaskWrapper* polipoTask;
-	BOOL polipoRunning;
+	NSTask* polipoTask;
 	BOOL firstRun;
 }
 - (IBAction)run:(id)sender;
@@ -38,7 +35,6 @@
 
 - (IBAction)openNetworkPreference:(id)sender;
 - (IBAction)openPolipoConfig:(id)sender;
-- (IBAction)openConsole:(id)sender;
 - (IBAction)openPreference:(id)sender;
 - (IBAction)startAtLogin:(id)sender;
 

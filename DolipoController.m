@@ -53,7 +53,6 @@
 -(void)awakeFromNib
 {	
 	firstRun = YES;
-    polipoRunning=NO;
     polipoTask=nil;
 
 	[self createStatusBar];
@@ -104,7 +103,6 @@
     NSTask *aTask = [NSTask launchedTaskWithLaunchPath:@"/usr/bin/killall" arguments:args];
 
     aTask.terminationHandler = ^(NSTask *task){
-        polipoRunning = NO;
     };
 }
 
@@ -115,7 +113,6 @@
     NSTask *aTask = [NSTask launchedTaskWithLaunchPath:@"/usr/bin/killall" arguments:args];
     
     aTask.terminationHandler = ^(NSTask *task){
-        polipoRunning = NO;
         [self run:self];
     };
 	return;
@@ -125,20 +122,11 @@
 // or stops the current search if one is already running
 - (IBAction)run:(id)sender
 {
-    if (polipoRunning)
-    {
-        return;
-    }
-    else
-    {
-        // If the task is still sitting around from the last run, release it
-        if (polipoTask!=nil) {
-            [polipoTask release];
-        }
-		
+    if (polipoTask == nil) {		
 		/* create an Path to polipo file */
 		NSBundle* bundle = [NSBundle mainBundle];
 		NSString* polipoPath = [bundle pathForResource:@"polipo" ofType:@""];
+        NSString* configPath = [NSString stringWithFormat:@"%@%@", [bundle resourcePath], @"/Config"];
 		
 		NSString* proxy;
 		if ( [proxyEnableButton state] == NSOnState ) {
@@ -158,11 +146,15 @@
 		} else {
 			pmm = @"";
 		}
+        
         NSLog(@"polipo start");
-        polipoTask=[[TaskWrapper alloc] initWithController:self arguments:[NSArray arrayWithObjects:polipoPath, @"-c", @"Config", proxy, forbidden, pmm, nil]];
-        // kick off the process asynchronously
-        [polipoTask startProcess];
-		
+        NSArray *args = [NSArray arrayWithObjects:@"-c", configPath, proxy, forbidden, pmm, nil];
+        polipoTask = [NSTask launchedTaskWithLaunchPath:polipoPath arguments:args];
+        
+        polipoTask.terminationHandler = ^(NSTask *task){
+            polipoTask = nil;
+        };
+        		
 		if ( firstRun ) {
 			if ( ![[NSFileManager defaultManager] fileExistsAtPath:[@"~/Library/Preferences/com.drikin.dolipo.plist" stringByExpandingTildeInPath]] ) {
 				//NSLog(@"initial startup");
@@ -200,47 +192,6 @@
     };
 }
 
-// This callback is implemented as part of conforming to the ProcessController protocol.
-// It will be called whenever there is output from the TaskWrapper.
-- (void)appendOutput:(NSString *)output
-{
-    // add the string (a chunk of the results from locate) to the NSTextView's
-    // backing store, in the form of an attributed string
-    [[resultsTextField textStorage] appendAttributedString: [[[NSAttributedString alloc]
-                             initWithString: output] autorelease]];
-    // setup a selector to be called the next time through the event loop to scroll
-    // the view to the just pasted text.  We don't want to scroll right now,
-    // because of a bug in Mac OS X version 10.1 that causes scrolling in the context
-    // of a text storage update to starve the app of events
-    [self performSelector:@selector(scrollToVisible:) withObject:nil afterDelay:0.0];
-}
-
-// This routine is called after adding new results to the text view's backing store.
-// We now need to scroll the NSScrollView in which the NSTextView sits to the part
-// that we just added at the end
-- (void)scrollToVisible:(id)ignore {
-    [resultsTextField scrollRangeToVisible:NSMakeRange([[resultsTextField string] length], 0)];
-}
-
-// A callback that gets called when a TaskWrapper is launched, allowing us to do any setup
-// that is needed from the app side.  This method is implemented as a part of conforming
-// to the ProcessController protocol.
-- (void)processStarted
-{
-    polipoRunning=YES;
-    // clear the results
-    [resultsTextField setString:@""];
-}
-
-// A callback that gets called when a TaskWrapper is completed, allowing us to do any cleanup
-// that is needed from the app side.  This method is implemented as a part of conforming
-// to the ProcessController protocol.
-- (void)processFinished
-{
-    polipoRunning=NO;
-    // change the button's title back for the next search
-}
-
 // If the user closes the search window, let's just quit
 -(BOOL)windowShouldClose:(id)sender
 {
@@ -259,11 +210,6 @@
 - (IBAction)openPolipoConfig:(id)sender
 {
 	[[NSWorkspace sharedWorkspace] openURL:[[[NSURL alloc] initWithString:@"http://127.0.0.1:8123/polipo/config?"] autorelease]];
-}
-
-- (IBAction)openConsole:(id)sender
-{
-	[window show];
 }
 
 - (IBAction)openPreference:(id)sender
